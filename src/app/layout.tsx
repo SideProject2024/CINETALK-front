@@ -17,13 +17,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="ko">
       <body
         className={`${pretendard.variable} ${appleSDGothicNeo.variable} font-pretendard`}
       >
         <ReactQueryProvier>
           <Header />
           {children}
+          <div id="portal" />
         </ReactQueryProvier>
       </body>
     </html>
