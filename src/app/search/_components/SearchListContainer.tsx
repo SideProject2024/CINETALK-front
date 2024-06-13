@@ -16,6 +16,7 @@ interface Props {
 export default function SearchListContainer({ query }: Props) {
   const [activeTab, setActiveTab] = useState(INIT_TAB);
   const [tabs, setTabs] = useState(["전체", "영화 0", "톡 0"]);
+
   const { movieList, talkList } = useSearchMovieAndTalkQuery(query);
   const isActiveTabIndex =
     activeTab === "전체" ? 0 : activeTab.includes("영화") ? 1 : 2;
